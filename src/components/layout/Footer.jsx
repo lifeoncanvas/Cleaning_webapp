@@ -36,56 +36,24 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* 4 Category Columns */}
+          {/* Navigation Links (Matching Navbar) */}
           <div className="footer-links-columns">
-            {/* SERVICES */}
             <div className="footer-col">
-              <span className="footer-heading">SERVICES</span>
+              <span className="footer-heading">NAVIGATION</span>
               <div className="footer-links-list">
-                <Link to="/services#home-cleaning" className="footer-nav-link">Home Cleaning</Link>
-                <Link to="/services#corporate-office" className="footer-nav-link">Office Cleaning</Link>
-                <Link to="/services#commercial-cleaning" className="footer-nav-link">Commercial Cleaning</Link>
-                <Link to="/services#care-living" className="footer-nav-link">Care Environment Cleaning</Link>
-                <Link to="/services#specialist-deep" className="footer-nav-link">Deep Cleaning</Link>
-                <Link to="/services#home-cleaning" className="footer-nav-link">End of Tenancy Cleaning</Link>
-                <Link to="/services#contract-cleaning" className="footer-nav-link">Contract Cleaning</Link>
-                <Link to="/services#specialist-deep" className="footer-nav-link">Post-Build Cleaning</Link>
-              </div>
-            </div>
-
-            {/* COMPANY */}
-            <div className="footer-col">
-              <span className="footer-heading">COMPANY</span>
-              <div className="footer-links-list">
+                <Link to="/" className="footer-nav-link">Home</Link>
+                <Link to="/services" className="footer-nav-link">Services</Link>
                 <Link to="/about" className="footer-nav-link">About Us</Link>
-                <Link to="/services" className="footer-nav-link">Our Services</Link>
-                <a href="/#why-choose" className="footer-nav-link">Our Standards</a>
+                <a href="/#sectors" className="footer-nav-link">Sectors</a>
+              </div>
+            </div>
+
+            <div className="footer-col">
+              <span className="footer-heading">SECTIONS</span>
+              <div className="footer-links-list">
                 <a href="/#compliance" className="footer-nav-link">Compliance</a>
-                <a href="/#faq" className="footer-nav-link">FAQs</a>
-                <a href="/#contact" className="footer-nav-link">Contact Us</a>
-              </div>
-            </div>
-
-            {/* CLIENTS */}
-            <div className="footer-col">
-              <span className="footer-heading">CLIENTS</span>
-              <div className="footer-links-list">
-                <a href="#quote" className="footer-nav-link">Domestic Clients</a>
-                <a href="#quote" className="footer-nav-link">Businesses</a>
-                <a href="#contract-enquiry" className="footer-nav-link">Care Homes</a>
-                <a href="#contracts" className="footer-nav-link">Property Managers</a>
-                <a href="#contracts" className="footer-nav-link">Commercial Organisations</a>
-              </div>
-            </div>
-
-            {/* LEGAL */}
-            <div className="footer-col">
-              <span className="footer-heading">LEGAL</span>
-              <div className="footer-links-list">
-                <a href="#privacy" className="footer-nav-link">Privacy Policy</a>
-                <a href="#cookies" className="footer-nav-link">Cookie Policy</a>
-                <a href="#terms" className="footer-nav-link">Terms & Conditions</a>
-                <a href="#complaints" className="footer-nav-link">Complaints Procedure</a>
+                <a href="/#contracts" className="footer-nav-link">Contracts</a>
+                <a href="/#faq" className="footer-nav-link">FAQ</a>
               </div>
             </div>
           </div>
