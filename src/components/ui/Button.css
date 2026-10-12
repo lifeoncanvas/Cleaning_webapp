@@ -1,0 +1,87 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  line-height: 1;
+}
+
+/* Primary Button (Gold/Mustard background with dark text) */
+.btn-primary {
+  background-color: var(--color-gold);
+  color: #1a160d;
+  padding: 12px 22px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(194, 162, 101, 0.25);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Outline Button */
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--border-card);
+  color: var(--text-primary);
+  padding: 11px 20px;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+/* Text link with arrow */
+.btn-link {
+  background: transparent;
+  padding: 0;
+  color: var(--text-gold);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.btn-link:hover {
+  color: var(--color-gold-hover);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn-link-muted {
+  background: transparent;
+  padding: 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.btn-link-muted:hover {
+  color: var(--text-primary);
+}
+
+.btn-icon {
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-icon {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 600px) {
+  .btn-primary,
+  .btn-outline {
+    min-height: 44px;
+  }
+}

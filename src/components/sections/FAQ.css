@@ -1,0 +1,131 @@
+.faq-section {
+  padding: 100px 0;
+  background-color: var(--bg-main);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.faq-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-heading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.faq-note {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.faq-right-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.faq-accordion-item {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  text-align: left;
+  gap: 20px;
+  color: var(--text-primary);
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.faq-question-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.faq-question-btn:hover .faq-question-text {
+  color: var(--color-gold);
+}
+
+.faq-toggle-icon {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+
+.faq-item-open .faq-toggle-icon {
+  color: var(--color-gold);
+}
+
+.faq-answer-wrap {
+  padding-bottom: 24px;
+}
+
+.faq-answer-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .faq-section {
+    padding: 70px 0;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 50px 0;
+  }
+
+  .faq-heading {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+    margin-bottom: 14px;
+  }
+
+  .faq-question-btn {
+    padding: 16px 0;
+    gap: 12px;
+  }
+
+  .faq-question-text {
+    font-size: 0.96rem;
+  }
+
+  .faq-answer-wrap {
+    padding-bottom: 18px;
+  }
+}

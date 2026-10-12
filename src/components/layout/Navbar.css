@@ -1,0 +1,347 @@
+.navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(12, 18, 25, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: all var(--transition-normal);
+  padding: 16px 0;
+}
+
+.navbar-scrolled {
+  background-color: rgba(12, 18, 25, 0.96);
+  padding: 12px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-crest-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: -1px;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 0.84rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  letter-spacing: 0.01em;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link-active {
+  color: var(--color-gold);
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-gold);
+  border-radius: 1px;
+}
+
+/* Navbar Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.nav-contact-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-icon {
+  color: var(--color-gold);
+}
+
+.nav-cta-btn {
+  padding: 9px 18px;
+  font-size: 0.82rem;
+  border-radius: var(--radius-sm);
+}
+
+/* User Auth Icon in Navbar */
+.nav-user-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #cbd5e1;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.nav-user-icon-btn:hover {
+  background: rgba(194, 162, 101, 0.15);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  transform: translateY(-1px);
+}
+
+.nav-user-icon-btn.logged-in {
+  border-color: rgba(194, 162, 101, 0.45);
+  background: rgba(194, 162, 101, 0.08);
+  color: var(--color-gold);
+}
+
+.nav-user-icon-btn .nav-user-status-dot {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 9px;
+  height: 9px;
+  background-color: #10b981;
+  border: 2px solid #0c1219;
+  border-radius: 50%;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+}
+
+.mobile-auth-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-gold);
+}
+
+.bar {
+  width: 20px;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+.mobile-toggle.is-open .bar:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.mobile-toggle.is-open .bar:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* Mobile Backdrop Overlay */
+.mobile-backdrop-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 13, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 998;
+  animation: fadeInMenu 0.2s ease-out;
+}
+
+@keyframes fadeInMenu {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDownMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Menu Drawer */
+.mobile-menu {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  background: rgba(12, 18, 25, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(194, 162, 101, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  padding: 24px var(--container-padding) 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: calc(100vh - 75px);
+  overflow-y: auto;
+  z-index: 999;
+  animation: slideDownMenu 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-link {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.mobile-link:hover,
+.mobile-link-active {
+  color: var(--color-gold);
+  background: rgba(194, 162, 101, 0.08);
+  padding-left: 18px;
+}
+
+.mobile-menu-cta-wrap {
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .nav-contact-link {
+    display: none;
+  }
+
+  /* The button is in the hamburger menu on mobile breakpoint */
+  .nav-cta-btn {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  /* Logo in navbar is just the icon logo, not the whole name */
+  .brand-text {
+    display: none;
+  }
+
+  .brand-crest-img {
+    height: 36px;
+  }
+
+  .navbar-actions {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-header {
+    padding: 10px 0;
+  }
+
+  .brand-crest-img {
+    height: 32px;
+  }
+
+  .navbar-actions {
+    gap: 10px;
+  }
+
+  .nav-user-icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .mobile-menu {
+    top: 54px;
+  }
+}

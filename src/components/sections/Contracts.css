@@ -1,0 +1,153 @@
+.contracts-section {
+  padding: 100px 0;
+  background-color: var(--bg-main);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.contracts-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.contracts-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contracts-heading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.contracts-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.contracts-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.checklist-icon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.contracts-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contracts-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.contracts-btn {
+  padding: 13px 26px;
+  font-size: 0.92rem;
+}
+
+.contracts-btn-sec {
+  padding: 12px 22px;
+  font-size: 0.92rem;
+}
+
+.contracts-subtext {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  max-width: 440px;
+  line-height: 1.5;
+}
+
+.contracts-image-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contracts-image-frame {
+  width: 100%;
+  height: 480px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background-color: #0d141e;
+}
+
+.contracts-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contracts-caption {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .contracts-section {
+    padding: 70px 0;
+  }
+
+  .contracts-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contracts-image-frame {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contracts-section {
+    padding: 50px 0;
+  }
+
+  .contracts-heading {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+    margin-bottom: 18px;
+  }
+
+  .contracts-image-frame {
+    height: 230px;
+    border-radius: var(--radius-lg);
+  }
+
+  .contracts-btn-group {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .contracts-btn,
+  .contracts-btn-sec {
+    width: 100%;
+    justify-content: center;
+  }
+}

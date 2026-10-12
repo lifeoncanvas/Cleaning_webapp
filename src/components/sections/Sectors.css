@@ -1,0 +1,158 @@
+.sectors-section {
+  padding: 100px 0;
+  background-color: var(--bg-main);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sectors-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+
+.sectors-heading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.sectors-sub-heading {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* 4x2 Visual Grid */
+.sectors-brief-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.sector-brief-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.sector-brief-card:hover {
+  background-color: var(--bg-card-hover);
+  border-color: rgba(194, 162, 101, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.sector-brief-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: rgba(194, 162, 101, 0.1);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sector-brief-name {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.sector-brief-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.sector-brief-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-top: auto;
+  transition: all var(--transition-fast);
+}
+
+.sector-brief-action:hover {
+  color: var(--color-gold-hover);
+  transform: translateX(2px);
+}
+
+@media (max-width: 1024px) {
+  .sectors-section {
+    padding: 70px 0;
+  }
+
+  /* 3 cards per row on tablet landscape */
+  .sectors-brief-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 2 cards per row structure */
+  .sectors-brief-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .sector-brief-card {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectors-section {
+    padding: 50px 0;
+  }
+
+  .sectors-header {
+    margin-bottom: 30px;
+  }
+
+  /* Maintain 2 cards in one row on mobile */
+  .sectors-brief-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .sector-brief-card {
+    padding: 14px 12px;
+    border-radius: var(--radius-md);
+  }
+
+  .sector-brief-icon-wrap {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+  }
+
+  .sector-brief-name {
+    font-size: 0.92rem;
+    margin-bottom: 4px;
+  }
+
+  .sector-brief-desc {
+    font-size: 0.75rem;
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+
+  .sector-brief-action {
+    font-size: 0.72rem;
+  }
+}

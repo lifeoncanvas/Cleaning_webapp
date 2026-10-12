@@ -1,0 +1,580 @@
+.about-page {
+  padding-top: 100px;
+  background-color: var(--bg-main);
+}
+
+.about-hero-header {
+  padding: 80px 0 60px;
+  text-align: center;
+  background: linear-gradient(180deg, #101924 0%, #0c1219 100%);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-page-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.about-page-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Section 1: Story */
+.about-story-section {
+  padding: 100px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.story-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.story-heading {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.story-p {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.story-check-pills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.story-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(194, 162, 101, 0.08);
+  border: 1px solid rgba(194, 162, 101, 0.25);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  color: #e2e8f0;
+}
+
+.gold-check {
+  color: var(--color-gold);
+}
+
+.about-story-visual {
+  width: 100%;
+}
+
+.story-visual-frame {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.story-team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.story-floating-stat {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(12, 18, 25, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(194, 162, 101, 0.3);
+  padding: 16px 22px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.76rem;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+/* Section 2: Bento Grid Mission & Values */
+.about-mission-section {
+  padding: 100px 0;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mission-intro-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 60px;
+}
+
+.mission-main-title {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.mission-intro-desc {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.mission-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bento-card {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.bento-card:hover {
+  border-color: rgba(194, 162, 101, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.bento-card-mission {
+  grid-column: span 3;
+  background: linear-gradient(135deg, #14202d 0%, #0d1520 100%);
+  border-color: rgba(194, 162, 101, 0.3);
+  padding: 44px 40px;
+}
+
+.bento-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.bento-mission-quote {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+
+.bento-mission-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.bento-val-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.bento-val-num {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.bento-val-icon {
+  color: var(--color-gold);
+}
+
+.bento-val-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.bento-val-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Section 3: Mosaic Showcase */
+.about-mosaic-section {
+  padding: 100px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mosaic-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mosaic-heading {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  grid-template-rows: 240px 240px;
+  gap: 24px;
+}
+
+.mosaic-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.mosaic-item-lg {
+  grid-row: span 2;
+}
+
+.mosaic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.mosaic-item:hover .mosaic-img {
+  transform: scale(1.04);
+}
+
+.mosaic-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(12, 18, 25, 0.85) 100%);
+  padding: 24px 20px 16px;
+}
+
+.mosaic-label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+/* Section 4: Compliance in depth */
+.about-compliance-section {
+  padding: 100px 0;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-compliance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.compliance-photo-frame {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.compliance-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.compliance-shield-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(12, 18, 25, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid rgba(194, 162, 101, 0.3);
+}
+
+.about-compliance-title {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+}
+
+.about-compliance-p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.compliance-badges-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.doc-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  color: #e2e8f0;
+}
+
+.doc-check {
+  color: var(--color-gold);
+}
+
+.compliance-request-btn {
+  padding: 13px 26px;
+}
+
+/* Section 5: Reviews */
+.about-reviews-section {
+  padding: 90px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reviews-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-item-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-stars {
+  font-size: 1.1rem;
+  color: var(--color-gold);
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+
+.review-quote {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.review-author {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-gold);
+}
+
+@media (max-width: 992px) {
+  .about-page {
+    padding-top: 80px;
+  }
+
+  .about-hero-header {
+    padding: 60px 0 40px;
+  }
+
+  .about-story-section,
+  .about-mission-section,
+  .about-mosaic-section,
+  .about-compliance-section,
+  .about-reviews-section {
+    padding: 70px 0;
+  }
+
+  .about-story-grid,
+  .about-compliance-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .story-visual-frame,
+  .compliance-photo-frame {
+    height: 340px;
+  }
+
+  .mission-bento-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bento-card-mission {
+    grid-column: span 2;
+  }
+
+  .mosaic-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .mosaic-item {
+    height: 220px;
+  }
+
+  .mosaic-item-lg {
+    height: 260px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mission-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .bento-card-mission {
+    grid-column: span 2;
+    padding: 24px 18px;
+  }
+
+  .bento-card {
+    padding: 18px 14px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .review-item-card {
+    padding: 18px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding-top: 60px;
+  }
+
+  .about-hero-header {
+    padding: 40px 0 30px;
+  }
+
+  .about-story-section,
+  .about-mission-section,
+  .about-mosaic-section,
+  .about-compliance-section,
+  .about-reviews-section {
+    padding: 50px 0;
+  }
+
+  .story-visual-frame,
+  .compliance-photo-frame {
+    height: 230px;
+    border-radius: var(--radius-lg);
+  }
+
+  .story-floating-stat {
+    bottom: 14px;
+    left: 14px;
+    padding: 10px 14px;
+  }
+
+  .stat-number {
+    font-size: 1.4rem;
+  }
+
+  .bento-mission-quote {
+    font-size: 1.15rem;
+  }
+
+  .compliance-badges-wrap {
+    gap: 8px;
+  }
+
+  .doc-pill {
+    font-size: 0.78rem;
+    padding: 6px 10px;
+  }
+
+  .compliance-request-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
